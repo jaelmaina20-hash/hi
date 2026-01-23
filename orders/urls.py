@@ -8,5 +8,5 @@ router.register(r'orders', OrderViewSet, basename='orders')
 
 urlpatterns = [
     path('checkout/', checkout, name='checkout' ),
-    path('api/', include(router.urls))
+    path('', include(router.urls))
 ]
