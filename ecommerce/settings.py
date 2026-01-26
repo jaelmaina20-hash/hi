@@ -74,6 +74,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "ecommerce.wsgi.application"
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',  # Good for browser testing
+        'rest_framework.authentication.TokenAuthentication',    # Good for mobile/external apps
+    ],
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated', # Everything is locked by default
+    ],
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 5  # Default page size
+}
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
