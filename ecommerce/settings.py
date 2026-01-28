@@ -23,12 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-k_ow&a$hulv(cqfg)!i^k*$qidi-uo!+9=k**d@vah-6^ve5d-"
+SECRET_KEY = config('SECRET KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://hi-gd9m.onrender.com', 'localhost']
 
 
 # Application definition
@@ -106,7 +106,6 @@ REST_FRAMEWORK = {
         'anon': '3/day',
     }
 }
-
 # for development and not production
 CORS_ALLOW_ALL_ORIGINS = True  
 
