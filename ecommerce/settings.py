@@ -131,7 +131,7 @@ FIELD_ENCRYPTION_KEY = 'UC6eZj4ua6iorLMmut18VojaKyWP-LXOhnZA3me8hX8='
 # }
 DATABASES = {
     'default': dj_database_url.config(
-            default=':///db.sqlite3',
+            default='sqlite:///db.sqlite3',
             conn_max_age=600,
             conn_health_checks=True,
     )
