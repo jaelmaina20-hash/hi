@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://hi-gd9m.onrender.com', 'localhost']
+ALLOWED_HOSTS = ['hi-gd9m.onrender.com', 'localhost']
 
 
 # Application definition
@@ -110,7 +110,7 @@ REST_FRAMEWORK = {
 CORS_ALLOW_ALL_ORIGINS = True  
 
 # for specific origins - for production
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = ['https://hi-gd9m.onrender.com']
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_HEADERS = [
